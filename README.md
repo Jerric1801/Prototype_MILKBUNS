@@ -13,6 +13,8 @@ Here is the link to our youtube presentation: [Youtube](https://youtu.be/bUcWCzs
 Upon loading the page, simply enter your shipping details and click on find, which will brings up a list of recommendations along with a map to visualise the location of recommended ports.
 We have included a 'Blockchain' page which you can access through the navigation bar at the top, which is a visualisation of the blockchain technology that we have simulated. You are able to view the shipment data as well as the block hash of each block. Feel free to experiment by adding your own inputs.
 
+We have also embedded our youtube presentation at the bottom of our landing page.
+
 ## Challenges
 Due to cost and time constraints, it is not really feasible for us to implement an actual blockchain database to store our data. Hence, we have opted to simulate it by creating a simple model.
 
