@@ -13,3 +13,9 @@ We have included a 'Blockchain' button at the bottom of the landing page, which 
 
 ## Challenges
 Due to cost and time constraints, it is not really feasible for us to implement an actual blockchain database to store our data. Hence, we have opted to simulate it by creating a simple model.
+
+
+## AI Model
+Initially we wanted to use a neural network to predict the likelihood of the port being congested on a given day. However, due to time constraints we instead opted to use Holt-Winters triple exponential smoothing method. Due to the lack of free public vessel data sets, we opted to create our own set of data. The dataset included unique ships and their date of arrival to Singapore’s port. There were 36000 unique observations from 2020 to 2022 in our data set with a seasonal trend during the months of September to November. 
+
+From our data set, the initial plot showed an obvious seasonal trend in ship arrivals. Due to this seasonality, we decided to use the Holt-Winters model with trend and seasonality. After creating the model, we generated expected ship arrivals and used this data to determine the availability of berths in our application. 
