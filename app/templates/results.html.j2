@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <title>Unblock</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <script src="{{ url_for('static',filename='../static/results.js') }}"> </script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/results.css') }}">
+  </head>
+  <body>
+
+    <div id = 'headerContainer'>
+
+      <div id = "buttonContainer">
+
+        <div id = "find" onclick = returnHome()>
+              <div id="ship"><img src="../static/img/boat-with-containers.png" alt="" /></div>
+                <p>Back</p>
+          </div>
+
+      </div>
+    
+    </div>
+
+    <div id = 'bodyContainer'>
+      <div id = 'portContainer'>
+
+      </div>
+      <div id = 'mapContainer'>
+
+        <div id='map'></div>
+
+      </div>
+
+    </div>
+  </body>
+</html>

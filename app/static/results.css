@@ -1,0 +1,172 @@
+@font-face {
+  font-family: questrial;
+  src: url("../static/Fonts/Questrial-Regular.ttf");
+}
+
+
+body { 
+    margin: 0; 
+    padding: 0; 
+    font-family: questrial;
+  }
+
+#headerContainer {
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#bodyContainer {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+  #portContainer {
+    width: 35vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    overflow-y: scroll;
+    padding-top: 20px;
+    gap: 20px;
+  }
+  
+  #mapContainer {
+    width: 65vw;
+    height: 100%;
+    background-color: grey;
+  }
+  
+  #map { 
+    top: 0; 
+    bottom: 0; 
+    width: 100%; 
+    height: 100%;
+  }
+
+  .portItem {
+    width: 90%;
+    height: 25vh;
+    background-color: white;
+    box-shadow: grey 2px 2px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+  }
+
+  .portItemImg {
+    width: 47.5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .portItemImg img {
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .portItemDesc {
+    width: 47.5%;
+    height: 100%;
+    font-size:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+  }
+
+  .portItemTitle {
+    font-weight: 900;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  .portItemCost {
+    font-weight: bold;
+    text-align: right;
+  }
+
+  .flexCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* button */
+
+#buttonContainer {
+  width: 20%;
+  margin-left: 30px;
+}
+#find {
+  height: 40px;
+  width: 100%;
+  background-color: transparent;
+  font-family: questrial;
+  border-radius: 20px;
+  border: 2px solid #034250;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+
+#find p {
+  position: relative;
+  color: #034250;
+  left: 0;
+  transition: all .35s ease-Out;
+  font-size: 20px;
+}
+
+#ship {
+  width: 100%;
+  height: 100%;
+  background: #034250;
+  left: 400px;
+  position: absolute;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .35s ease-Out;
+  bottom: 0;
+  
+}
+
+#find img {
+  width: 20px;
+  height: auto;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#find:hover #ship {
+  left: 0;
+  cursor: pointer;
+}
+
+#find:hover p {
+  left: 150px;
+}
+
+.marker {
+  background-image: url('./img/location.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}

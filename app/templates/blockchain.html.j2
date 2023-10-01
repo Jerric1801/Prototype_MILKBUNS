@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href = "{{ url_for('static' , filename = '../static/blockchain.css')}}">
+<script src="{{ url_for('static',filename='../static/addBlock.js') }}"> </script>
+  <script type = "module" src = "{{url_for('static' , filename= '../static/blockchain.js')}}"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>Unblock</title>
+</head>
+<body>
+    <div id = "topContainer">
+        <div id = "header">
+
+        <div id = "identity" href = "./">
+            <img src = "../static/img/logo.png" href = "./">
+        </div>
+        <div id = "navBar">
+            <div class = "navItem">
+            <a href = "/">Home</a>
+            </div>
+            <div class = "navItem">
+            <a href = "/blockchain">BlockChain</a>
+            </div>
+        </div>
+        
+        </div>
+        <video src="../static/img/production_id_3840442 (720p).mp4" autoplay loop muted></video>
+        <div id = "videomask"></div>
+    </div>
+    <div class="addBlock">
+        <h2 style = "text-align: center;">Add new shipment</h2>
+        <form id="addBlock" onsubmit="return false">
+            <div>
+                <label for="supplier">Supplier</label>
+                <input type="text" name="supplier">
+            </div>
+            <div>
+                <label for="cargo">Cargo</label>
+                <input type="text" name="cargo">
+            </div>
+            <div>
+                <label for="supplier">Amount</label>
+                <input type="text" name="amount">
+            </div>
+            <div>
+                <label for="supplier">Destination</label>
+                <input type="text" name="destination">
+            </div>
+            <div>
+                <button class="button" onclick="newBlock()">Add</button>
+            </div>
+        </form>
+    </div>
+    <table id = "Table">
+        <thead>
+            <tr>
+                <th>Block</th>
+                <th>Current Hash</th>
+                <th>Supplier</th>
+                <th>Cargo</th>
+                <th>Amount</th>
+                <th>Destination</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dictionary in dictionary_list %}
+                <tr>
+                    <td>{{ dictionary['index'] }}</td>
+                    <td>{{ dictionary['current_hash'] }}</td>
+                    <td>{{ dictionary['shipment'][0] }}</td>
+                    <td>{{ dictionary['shipment'][1] }}</td>
+                     <td>{{ dictionary['shipment'][2] }}</td>
+                      <td>{{ dictionary['shipment'][3] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

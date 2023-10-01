@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href = "{{ url_for('static' , filename = 'index.css')}}">
+  <script src = "{{url_for('static' , filename= 'index.js')}}"></script>  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>Unblock</title>
+</head>
+<body>
+
+  <div id = "topContainer">
+      <div id = "header">
+
+      <div id = "identity">
+        <img src = "../static/img/logo.png">
+      </div>
+        <div id = "navBar">
+            <div class = "navItem">
+            <a href = "/">Home</a>
+            </div>
+            <div class = "navItem">
+            <a href = "/blockchain">BlockChain</a>
+            </div>
+        </div>
+    
+    </div>
+    <video src="../static/img/pexels-kelly-lacy-6595374 (720p).mp4" autoplay loop muted></video>
+    <div id = "videomask"></div>
+  </div>
+
+  <div id = "bottomContainer">
+
+    <div id = "inputContainer">
+
+    <div id = "inputInfo">
+      <p>Get the best date and port for your shipment, fast and easy.</p>
+    </div>
+
+    <div id = "inputBoxes">
+      <div class = "boxes">
+        <div class = "inputBox">
+          <p>Ship Type</p>
+            <select class = "userInput">
+             <option disabled selected value>
+              <option>Container</option>
+              <option>Bulk</option>
+              <option>Oil tankers</option>
+              <option>Gas Carriers</option>
+              <option>Ro-ro</option>
+            </select>
+        </div>
+        <div class = "inputBox">
+          <p>Cargo Type</p>
+          <select class = "userInput">
+            <option disabled selected value>
+            <option>Bulk</option>
+            <option>Containerized</option>
+            <option>Breakbulk</option>
+            <option>Liquid</option>
+            <option>Gas</option>
+          </select>
+        </div>
+        </div>
+      <div class = "boxes">
+          <div class = "inputBox">
+            <p>Origin</p>
+            <input class = "userInput">
+          </div>
+          <div class = "inputBox">
+            <p>Destination</p>
+            <select class = "userInput">
+            <option disabled selected value>
+              <option>Singapore</option>
+            </select>
+          </div>
+      </div>
+
+      <div class = "boxes">
+          <div class = "inputBox">
+            <p>Departure</p>
+            <input type = "date" class = "userInput">
+          </div>
+          <div class = "inputBox">
+            <p>Earliest Arrival</p>
+            <input type = "date" id = "earliestArrival" class = "userInput">
+          </div>
+      </div>
+
+        <div class = "boxes">
+          <div class = "inputBox">
+            <p>Latest Arrival</p>
+            <input type = "date" id = "latestArrival" class = "userInput">
+          </div>
+          <div style = "padding-top: 30px;" class = "inputBox">
+            <div id = "find" onclick = findPorts()>
+            <div id="ship"><img src="../static/img/boat-with-containers.png" alt="" /></div>
+              <p>Find</p>
+            </div>
+          </div>
+      </div>
+
+    </div>
+
+    <div id = "errorContainer">
+       <p id = "errorMessage">Please fill up all the fields</p>
+    </div>
+  
+
+  </div>
+</body>
+</html>
