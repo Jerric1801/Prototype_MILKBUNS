@@ -1,0 +1,42 @@
+---
+title: "PSA"
+output: html_document
+date: "2023-10-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("lubridate")
+```
+
+```{r ship, include=FALSE}
+ship_data <- read.csv("ships.csv")
+df <- data.frame(arrival_date = ship_data$arrival_date)
+arrival_date_counts <- table(df$arrival_date)
+arrival_date_counts_df <- as.data.frame(arrival_date_counts)
+```
+
+```{r ships, echo=FALSE}
+ts_ships <- ts(arrival_date_counts_df$Freq, start = decimal_date(as.Date("2020-01-01")), frequency = 365)
+plot(ts_ships, xlab="Arrival Date", ylab="Number of Ships", main="Number of Ships Arrivals over Time")
+```
+
+```{r hw, echo=FALSE}
+hw1 <- HoltWinters(ts_ships)
+
+custom_hw_summary <- function(hw_object) {
+  cat("Holt-Winters Smoothing Parameters:\n")
+  cat("Alpha (a):", hw_object$alpha, "\n")
+  cat("Beta (b):", hw_object$beta, "\n")
+  cat("Gamma (g):", hw_object$gamma, "\n")
+  cat("\n")
+  cat("Other Information:\n")
+  cat("Initial Level (l):", hw_object$coefficients[1], "\n")
+  cat("Initial Trend (b):", hw_object$coefficients[2], "\n")
+}
+custom_hw_summary(hw1)
+```
+```{r hw_pred, echo=FALSE}
+hw1_pred <- predict(hw1, n.ahead=365)
+plot(hw1, hw1_pred, xlab="Date", xlim = c(decimal_date(as.Date("2020-01-01")), decimal_date(as.Date("2023-12-31"))))
+```
