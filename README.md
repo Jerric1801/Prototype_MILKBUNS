@@ -5,7 +5,7 @@
 Our solution aims to make the berthing process more efficient, by coming up with the best recommendations for your berthing port/terminal, based on trends and seasonal demand. We trained our model with data that we aim to store using blockchain technology, which we have simulated in our prototype. We have opted to use blockchain technology due to its secure and easy tracing of new shipment activity, with the potential of paving way for new collaboration between shipping companies in the future. By increasing visibility of such information, we aim to aid stakeholders in making informed decisions for shipping, to reduce congestion, prevent waste of resources and lower operation costs.
 
 ## Link
-[UNBLOCK](https://unblock-by-milkbuns-9b127424f40e.herokuapp.com/)
+Our project, titled '[UNBLOCK](https://unblock-by-milkbuns-9b127424f40e.herokuapp.com/)', is a play on words, as it aims to 'unblock' congestion at our ports using blockchain technology.
 
 ## How to use
 Upon loading the page, simply enter your shipping details and click on find, which will brings up a list of recommendations along with a map to visualise the location of recommended ports.
