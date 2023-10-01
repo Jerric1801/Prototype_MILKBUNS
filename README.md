@@ -7,7 +7,7 @@ Our solution aims to make the berthing process more efficient, by coming up with
 ## Link
 Our project, titled '[UNBLOCK](https://unblock-by-milkbuns-9b127424f40e.herokuapp.com/)', is a play on words, as it aims to 'unblock' congestion at our ports using blockchain technology.
 
-Here is the link to our youtube presentation: [Youtube](https://youtu.be/y2V6e93VHa0)
+Here is the link to our youtube presentation: 
 
 ## How to use
 Upon loading the page, simply enter your shipping details and click on find, which will brings up a list of recommendations along with a map to visualise the location of recommended ports.
