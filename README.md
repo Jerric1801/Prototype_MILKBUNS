@@ -17,5 +17,9 @@ Due to cost and time constraints, it is not really feasible for us to implement 
 
 ## AI Model
 Initially we wanted to use a neural network to predict the likelihood of the port being congested on a given day. However, due to time constraints we instead opted to use Holt-Winters triple exponential smoothing method. Due to the lack of free public vessel data sets, we opted to create our own set of data. The dataset included unique ships and their date of arrival to Singapore’s port. There were 36000 unique observations from 2020 to 2022 in our data set with a seasonal trend during the months of September to November. 
+<img width="961" alt="Screenshot 2023-10-01 at 10 45 38 PM" src="https://github.com/Jerric1801/Prototype_MILKBUNS/assets/59726668/63178f7d-09d5-4b65-87fd-a4ddbd15006d">
 
 From our data set, the initial plot showed an obvious seasonal trend in ship arrivals. Due to this seasonality, we decided to use the Holt-Winters model with trend and seasonality. After creating the model, we generated expected ship arrivals and used this data to determine the availability of berths in our application. 
+
+<img width="731" alt="Screenshot 2023-10-01 at 10 46 14 PM" src="https://github.com/Jerric1801/Prototype_MILKBUNS/assets/59726668/17cc1001-2162-46ab-afb9-a38f230ce5e1">
+
